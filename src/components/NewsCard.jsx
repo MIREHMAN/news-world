@@ -1,33 +1,39 @@
-import * as React from 'react';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
-import CardActionArea from '@mui/material/CardActionArea';
-import CardActions from '@mui/material/CardActions';
+import * as React from "react";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import Typography from "@mui/material/Typography";
+import Button from "@mui/material/Button";
+import CardActionArea from "@mui/material/CardActionArea";
+import CardActions from "@mui/material/CardActions";
 
-export default function NewsCard({news_Img,news_desc,news_title}) {
+export default function NewsCard({ news_Img, news_desc, news_title, link }) {
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ maxWidth: 300 , mt:3, ml:3}}>
       <CardActionArea>
         <CardMedia
           component="img"
-          height="140"
+          height="240"
           image={news_Img}
           alt={news_title}
         />
         <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
+          <Typography gutterBottom variant="h6" component="div">
             {news_title}
           </Typography>
-          <Typography variant="body2" sx={{ color: 'text.secondary' }}>
+          <Typography variant="body2" sx={{ color: "text.secondary" }}>
             {news_desc}
           </Typography>
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary">
+        <Button sx={{margin:'auto', marginBottom:'10px'}}
+          size="small"
+          color="primary"
+          variant="contained"
+          aria-label={`Read more about ${news_title}`}
+          onClick={() => window.open(link, "_blank")}
+        >
           Read More
         </Button>
       </CardActions>

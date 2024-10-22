@@ -1,5 +1,0 @@
-export {
-    data{
-        news:'news',
-    }
-}
