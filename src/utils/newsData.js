@@ -1,0 +1,5 @@
+export {
+    data{
+        news:'news',
+    }
+}
