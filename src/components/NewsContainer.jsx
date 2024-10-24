@@ -27,18 +27,19 @@ function NewsContainer() {
         <Typography variant="h3">News Headlines</Typography>
         
       </Grid>
-      <Grid size={12}>
-        <Grid size={{xs:12,md:4}}>
+      <Grid container rowSpacing={1} columnSpacing={{ xs: 3, sm: 2, md: 3 }}>
+        
           {articles.map((article) => (
+            <Grid size={{xs:12,md:3}}>
             <NewsCard
               key={article.title}
               news_Img={article.urlToImage || noImage}
-              news_desc={article.description || "No description available"}
               news_title={article.title}
               link={article.url}
             />
+            </Grid>
           ))}
-        </Grid>
+        
       </Grid>
     </Grid>
   );
