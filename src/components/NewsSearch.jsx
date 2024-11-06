@@ -4,6 +4,9 @@ import { InputBase } from "@mui/material";
 import { SearchOutlined } from "@mui/icons-material";
 
 const NewsSearch = () => {
+  const handleInput=(e)=>{
+    
+  }
   const Search = styled("div")(({ theme }) => ({
     position: "relative",
     borderRadius: theme.shape.borderRadius,
@@ -44,6 +47,7 @@ const NewsSearch = () => {
       },
     },
   }));
+
   return (
     <Search>
             <SearchIconWrapper>
@@ -51,7 +55,8 @@ const NewsSearch = () => {
             </SearchIconWrapper>
             <StyledInputBase
               placeholder="Search…"
-              inputProps={{ 'aria-label': 'search' }}
+              onChange={handleInput}
+
             />
           </Search>
   );
