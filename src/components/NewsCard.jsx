@@ -13,12 +13,12 @@ export default function NewsCard({ news_Img, news_desc, news_title, link }) {
       <CardActionArea>
         <CardMedia
           component="img"
-          height="240"
+          height="200"
           image={news_Img}
           alt={news_title}
         />
         <CardContent>
-          <Typography gutterBottom variant="h6" component="div">
+          <Typography gutterBottom variant="body1" >
             {news_title}
           </Typography>
           <Typography variant="body2" sx={{ color: "text.secondary" }}>
