@@ -20,7 +20,7 @@ function Navbar() {
     <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <NewspaperIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+          <NewspaperIcon sx={{ display: { xs: 'flex', md: 'flex' }, mr: 1 }} />
           <Typography
             variant="h6"
             noWrap
@@ -28,7 +28,7 @@ function Navbar() {
             href="#"
             sx={{
               mr: 2,
-              display: { xs: 'block', md: 'flex' },
+              display: { xs: 'flex', md: 'flex' },
               fontFamily: 'monospace',
               fontWeight: 700,
               letterSpacing: '.3rem',
@@ -39,7 +39,7 @@ function Navbar() {
             NEWS-WORLD
           </Typography>
 
-          <NewspaperIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
+          
          
          
             
