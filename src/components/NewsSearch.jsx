@@ -1,5 +1,7 @@
 import React from "react";
 import { styled, alpha } from '@mui/material/styles';
+import { InputBase } from "@mui/material";
+import { SearchOutlined } from "@mui/icons-material";
 
 const NewsSearch = () => {
   const Search = styled("div")(({ theme }) => ({
@@ -45,7 +47,7 @@ const NewsSearch = () => {
   return (
     <Search>
             <SearchIconWrapper>
-              <SearchIcon />
+              <SearchOutlined />
             </SearchIconWrapper>
             <StyledInputBase
               placeholder="Search…"
